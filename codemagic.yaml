@@ -4,9 +4,7 @@ workflows:
     max_build_duration: 60
     environment:
       vars:
-        # اگر از EAS استفاده می‌کنی و نیاز به Expo token داری، اینجا قرار بده
-        # EXPO_TOKEN: Encrypted(<your-expo-token>)
-        # اگر نمی‌خوای token اضافه کنی، خط بالا را کامنت بگذار
+        # اگر نیازی به Expo token نداری، این بخش خالی بماند
     scripts:
       - name: Install dependencies
         script: yarn install
