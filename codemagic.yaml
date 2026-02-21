@@ -1,0 +1,14 @@
+workflows:
+  android-workflow:
+    name: Build Android APK
+    max_build_duration: 60
+    environment:
+      vars:
+        EXPO_TOKEN: Encrypted(<your-expo-token>)
+    scripts:
+      - name: Install dependencies
+        script: yarn install
+      - name: Build APK
+        script: npx eas build --platform android --profile preview --non-interactive
+    artifacts:
+      - build/**/outputs/**/*.apk
