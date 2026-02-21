@@ -2,9 +2,6 @@ workflows:
   android-workflow:
     name: Build Android APK
     max_build_duration: 60
-    environment:
-      vars:
-        # اگر نیازی به Expo token نداری، این بخش خالی بماند
     scripts:
       - name: Install dependencies
         script: yarn install
